@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Profile placeholder</title>
+  <desc id="desc">A rounded profile placeholder icon.</desc>
+  <rect width="240" height="240" rx="36" fill="#111827" />
+  <circle cx="120" cy="90" r="50" fill="#1e293b" stroke="#38bdf8" stroke-width="8" />
+  <path d="M60 196c0-33 27-60 60-60s60 27 60 60" fill="#1e293b" stroke="#38bdf8" stroke-width="8" />
+</svg>
