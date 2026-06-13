@@ -15,9 +15,12 @@
             <nav class="site-nav" id="siteNav">
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
-                <a href="#testimonials">Testimonials</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <div class="header-stats">
+                <span class="stat-item">👁️ <span id="viewCount">0</span></span>
+                <button class="stat-item stat-button" id="likeButton" type="button" aria-label="Like this portfolio">❤️ <span id="likeCount">0</span></button>
+            </div>
         </div>
     </header>
 
@@ -81,7 +84,7 @@
                     <article class="project-card">
                         <h3>Extra Curriculum</h3>
                         <p>Member of Coding Club, Volunteer Tutor for first-year students, Contributor to open-source projects.</p>
-                        <a class="button button-sm" href="#contact">Contact for CV</a>
+                        <a class="button button-sm" href="assets/files/CV.pdf" target="_blank" rel="noopener">Download CV</a>
                     </article>
                 </div>
             </div>
@@ -95,73 +98,39 @@
                 </div>
                 <div class="project-grid">
                     <article class="project-card">
-                        <h3>B2B SaaS Landing Page</h3>
-                        <p>A conversion-optimized SaaS marketing website with dynamic case studies and lead capture flow.</p>
-                        <p class="project-tech">PHP, Tailwind CSS, JavaScript</p>
-                        <a class="button button-sm" href="#projects">Explore</a>
+                        <h3>Customer Churn Prediction</h3>
+                        <p>Customer churn is a major challenge for subscription-based businesses. The model is implemented from scratch using NumPy to demonstrate a strong understanding of machine learning fundamentals.</p>
+                        <p class="project-tech">Python, NumPy, Pandas, Matplotlib & Seaborn, Scikit-learn (for benchmarking), Jupyter Notebook</p>
+                        <a class="button button-sm" href="https://github.com/NandiNandish/Customer_Churn_Prediction" target="_blank" rel="noopener noreferrer">Explore</a>
                     </article>
                     <article class="project-card">
-                        <h3>Portfolio CMS Dashboard</h3>
+                        <h3>Caffee Management System</h3>
                         <p>A custom admin interface for managing portfolio content, projects, and client testimonials.</p>
-                        <p class="project-tech">Laravel, MySQL, Vue.js</p>
-                        <a class="button button-sm" href="#projects">Explore</a>
+                        <p class="project-tech">UI/UX Design, Tailwind, PostCSS, PHP, jQuery, Laravel, MySQL</p>
+                        <a class="button button-sm" href="https://github.com/NandiNandish/Caffee-Management-System" target="_blank" rel="noopener noreferrer">Explore</a>
                     </article>
                     <article class="project-card">
-                        <h3>E-commerce Conversion Booster</h3>
+                        <h3>AI Secure Lock</h3>
                         <p>A high-performance storefront upgrade with analytics-driven product recommendations.</p>
-                        <p class="project-tech">WordPress, WooCommerce, PHP</p>
-                        <a class="button button-sm" href="#projects">Explore</a>
+                        <p class="project-tech">React 18, TypeScript, Vite, Supabase(PgSQL), CryptoJS, React Router v6, Tailwind CSS</p>
+                        <a class="button button-sm" href="https://github.com/NandiNandish/AI-Secure-Lock" target="_blank" rel="noopener noreferrer">Explore</a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="testimonials">
-            <div class="container">
-                <div class="section-heading">
-                    <h2>Testimonials</h2>
-                    <p>Trusted by clients and teams who value quality and delivery.</p>
-                </div>
-                <div class="testimonial-grid">
-                    <article class="testimonial-card">
-                        <p class="quote">“Nandish turned our vision into a sleek website with flawless execution. Communication was always clear and deadlines were met.”</p>
-                        <p class="author">Alicia Rivera, <span>Product Manager</span></p>
-                    </article>
-                    <article class="testimonial-card">
-                        <p class="quote">“The website launch brought a noticeable increase in conversions and customer trust. Highly recommended for any growth-stage team.”</p>
-                        <p class="author">Jordan Lee, <span>Startup Founder</span></p>
-                    </article>
-                </div>
-            </div>
-        </section>
+        <!-- Testimonials removed: static, read-only portfolio now -->
 
         <section class="section section-contact" id="contact">
-            <div class="container contact-grid">
-                <div>
-                    <div class="section-heading">
-                        <h2>Contact</h2>
-                        <p>Ready to discuss your next project? Send a quick message and I’ll get back to you soon.</p>
-                    </div>
-                    <div class="contact-info">
-                        <p><strong>Email</strong><br><a href="mailto:nandinandisha22@gmail.com">nandinandisha22@gmail.com</a></p>
-                        <p><strong>Phone</strong><br>+91 7259795114</p>
-                        <p><strong>Location</strong><br>Bengaluru, India</p>
-                    </div>
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Contact</h2>
+                    <p>For inquiries, please use the contact details below. This portfolio is read-only and does not accept direct submissions.</p>
                 </div>
-                    <div class="contact-form-wrapper">
-                    <div id="formMessage" class="form-alert" style="display:none"></div>
-                    <form class="contact-form" id="contactForm" action="send_mail.php" method="post" novalidate>
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-
-                        <button class="button button-primary" type="submit">Send Message</button>
-                    </form>
+                <div class="contact-info" style="max-width:720px;">
+                    <p><strong>Email</strong><br>nandinandisha22@gmail.com</p>
+                    <p><strong>Phone</strong><br>+91 7259795114</p>
+                    <p><strong>Location</strong><br>Bengaluru, India</p>
                 </div>
             </div>
         </section>

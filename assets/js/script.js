@@ -43,60 +43,41 @@ if (themeToggle) {
 
 loadTheme();
 
-const contactForm = document.getElementById('contactForm');
-const formMessage = document.getElementById('formMessage');
+// Counter management
+const STORAGE_KEYS = {
+    views: 'portfolioViews',
+    likes: 'portfolioLikes'
+};
 
-if (contactForm && formMessage) {
-    contactForm.addEventListener('submit', (event) => {
-        event.preventDefault();
+function initCounters() {
+    const viewCount = document.getElementById('viewCount');
+    const likeCount = document.getElementById('likeCount');
+    const likeButton = document.getElementById('likeButton');
 
-        const name = contactForm.name.value.trim();
-        const email = contactForm.email.value.trim();
-        const message = contactForm.message.value.trim();
+    if (!viewCount || !likeCount || !likeButton) return;
 
-        if (!name || !email || !message) {
-            showFormMessage('Please fill in all fields before sending your message.', 'error');
-            return;
-        }
+    // Load stored values or initialize to 0
+    let views = parseInt(localStorage.getItem(STORAGE_KEYS.views) || '0');
+    let likes = parseInt(localStorage.getItem(STORAGE_KEYS.likes) || '0');
 
-        if (!validateEmail(email)) {
-            showFormMessage('Please enter a valid email address.', 'error');
-            return;
-        }
+    // Increment views on page load
+    views++;
+    localStorage.setItem(STORAGE_KEYS.views, views);
+    viewCount.textContent = views;
+    likeCount.textContent = likes;
 
-        // Send to server endpoint
-        const formData = new FormData();
-        formData.append('name', name);
-        formData.append('email', email);
-        formData.append('message', message);
-
-        showFormMessage('Sending message...', '');
-
-        fetch('send_mail.php', {
-            method: 'POST',
-            body: formData,
-        })
-        .then(r => r.json())
-        .then(data => {
-            if (data && data.success) {
-                showFormMessage(data.message || 'Message sent successfully.', 'success');
-                contactForm.reset();
-            } else {
-                showFormMessage(data.message || 'Failed to send message.', 'error');
-            }
-        })
-        .catch(() => {
-            showFormMessage('Failed to send message. Server error or CORS issue.', 'error');
-        });
+    // Like button handler
+    likeButton.addEventListener('click', () => {
+        likes++;
+        localStorage.setItem(STORAGE_KEYS.likes, likes);
+        likeCount.textContent = likes;
+        
+        // Visual feedback
+        likeButton.style.transform = 'scale(1.1)';
+        setTimeout(() => {
+            likeButton.style.transform = 'scale(1)';
+        }, 200);
     });
 }
 
-function validateEmail(value) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-}
-
-function showFormMessage(text, type) {
-    formMessage.textContent = text;
-    formMessage.className = `form-alert ${type}`;
-    formMessage.style.display = 'block';
-}
+initCounters();
