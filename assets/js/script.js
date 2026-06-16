@@ -18,7 +18,10 @@ links.forEach(link => {
 function applyTheme(theme) {
     document.body.classList.toggle('light', theme === 'light');
     if (themeToggle) {
-        themeToggle.textContent = theme === 'light' ? 'Dark Mode' : 'Light Mode';
+        const icon = theme === 'light' ? '🌙' : '☀️';
+        const label = theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme';
+        themeToggle.innerHTML = `<span id="themeIcon">${icon}</span>`;
+        themeToggle.setAttribute('aria-label', label);
     }
     localStorage.setItem('portfolioTheme', theme);
 }
