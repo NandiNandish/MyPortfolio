@@ -46,6 +46,25 @@ if (themeToggle) {
 
 loadTheme();
 
+// Entrance animations: reveal elements on scroll with IntersectionObserver
+(() => {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return; // avoid motion for users who prefer reduced motion
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.revealable').forEach(el => {
+        observer.observe(el);
+    });
+})();
+
 // Counter management
 const STORAGE_KEYS = {
     views: 'portfolioViews',

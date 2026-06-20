@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | E B Nandeesh | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">E B Nandeesh</a>
+            <button class="nav-toggle" id="navToggle">Menu</button>
+            <nav class="site-nav" id="siteNav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme"> <span id="themeIcon">🌙</span> </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="contact-hero">
+            <div class="container">
+                <div class="revealable">
+                    <p class="eyebrow">Let's Connect</p>
+                    <h1>Get in Touch</h1>
+                    <p class="lead">Have a project idea, opportunity, or just want to chat about tech? I'd love to hear from you. Reach out anytime.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-wrapper revealable">
+                        <h2>Send a Message</h2>
+                        <form id="contactForm" class="contact-form" action="https://formspree.io/f/xaqzkebg" method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required placeholder="Tell me more..." rows="6"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">How did you find me?</label>
+                                <select id="source" name="source">
+                                    <option value="">Select an option</option>
+                                    <option value="linkedin">LinkedIn</option>
+                                    <option value="github">GitHub</option>
+                                    <option value="referral">Referral</option>
+                                    <option value="search">Search Engine</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="button button-primary">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-wrapper revealable">
+                        <h2>Contact Information</h2>
+                        
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <p><a href="mailto:nandinandisha22@gmail.com">nandinandisha22@gmail.com</a></p>
+                            <p class="contact-note">I typically respond within 24 hours.</p>
+                        </div>
+
+                        <div class="contact-info">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+917259795114">+91 7259795114</a></p>
+                            <p class="contact-note">Available for calls Mon-Fri, 10 AM - 6 PM IST</p>
+                        </div>
+
+                        <div class="contact-info">
+                            <h3>Location</h3>
+                            <p>Bengaluru, India</p>
+                            <p class="contact-note">Open to remote opportunities and relocation.</p>
+                        </div>
+
+                        <div class="social-links">
+                            <h3>Connect on Social</h3>
+                            <div class="social-grid">
+                                <a href="https://www.linkedin.com/in/e-b-nandeesha-36435831b/" target="_blank" rel="noopener" class="social-link">
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/NandiNandish" target="_blank" rel="noopener" class="social-link">
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://twitter.com/nandish" target="_blank" rel="noopener" class="social-link">
+                                    <span>Twitter</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="availability">
+                            <h3>Availability</h3>
+                            <p class="availability-status">✓ Open for opportunities</p>
+                            <p class="availability-note">Available for freelance projects, full-time roles, and collaborative work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container revealable">
+                <div class="section-heading">
+                    <h2>Quick Response Guide</h2>
+                    <p>Here's what you can expect based on your inquiry type:</p>
+                </div>
+                <div class="response-grid">
+                    <article class="response-card revealable">
+                        <h3>💼 Job Opportunity</h3>
+                        <p>I'll review and respond within 24 hours with my CV and initial thoughts about the role.</p>
+                    </article>
+                    <article class="response-card revealable">
+                        <h3>🤝 Collaboration</h3>
+                        <p>I'm always interested in collaborating. Let's schedule a quick call to discuss the project.</p>
+                    </article>
+                    <article class="response-card revealable">
+                        <h3>❓ Questions</h3>
+                        <p>Happy to answer questions about my projects, experience, or technical approach.</p>
+                    </article>
+                    <article class="response-card revealable">
+                        <h3>📧 General Inquiry</h3>
+                        <p>I'll get back to you within 48 hours with a thoughtful response.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p>&copy; 2026 E B Nandeesh . Built for modern, professional digital presence.</p>
+            <nav class="footer-nav">
+                <a href="https://www.linkedin.com/in/e-b-nandeesha-36435831b/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/NandiNandish" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://twitter.com/nandish" target="_blank" rel="noopener">Twitter</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
